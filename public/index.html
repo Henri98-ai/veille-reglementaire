@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Veille réglementaire — Comptabilité, Fiscalité, Facturation électronique</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1>Veille réglementaire</h1>
+    <div class="subtitle">Comptabilité · Fiscalité · Facturation électronique</div>
+  </div>
+  <nav>
+    <a href="/digest">Digest client</a>
+    <a href="/admin">Espace admin</a>
+  </nav>
+</header>
+
+<main>
+  <div class="filters">
+    <span class="chip active all" data-cat="all">Tout</span>
+    <span class="chip" data-cat="comptabilite">Comptabilité</span>
+    <span class="chip" data-cat="fiscalite">Fiscalité</span>
+    <span class="chip" data-cat="facturation_electronique">Facturation électronique</span>
+    <select id="sourceFilter"><option value="">Toutes les sources</option></select>
+    <select id="daysFilter">
+      <option value="1">Dernières 24h</option>
+      <option value="7" selected>7 derniers jours</option>
+      <option value="30">30 derniers jours</option>
+      <option value="">Tout l'historique</option>
+    </select>
+    <input type="search" id="searchInput" placeholder="Rechercher un mot-clé..." />
+  </div>
+
+  <div class="meta-bar">
+    <span id="resultCount"></span>
+    <span id="lastRunInfo"></span>
+  </div>
+
+  <div id="itemsList"></div>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "veille-reglementaire",
+  "version": "1.0.0",
+  "description": "Veille réglementaire quotidienne - Comptabilité, Fiscalité, Facturation électronique",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^2.7.0",
+    "nodemailer": "^10.0.10",
+    "rss-parser": "^3.13.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,234 @@
+:root {
+  --navy: #0f2237;
+  --navy-light: #16324a;
+  --slate: #4a5b6c;
+  --slate-light: #eef2f5;
+  --border: #dfe6ec;
+  --bg: #f6f8fa;
+  --white: #ffffff;
+  --accent: #1c6e5e;
+  --danger: #b03a2e;
+
+  --cat-comptabilite: #1c6e5e;
+  --cat-comptabilite-bg: #e4f3ef;
+  --cat-fiscalite: #8a5a00;
+  --cat-fiscalite-bg: #fbeed7;
+  --cat-facturation_electronique: #4b3b8f;
+  --cat-facturation_electronique-bg: #eae7f8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--navy);
+  line-height: 1.45;
+}
+
+header.topbar {
+  background: var(--navy);
+  color: white;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header.topbar h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+header.topbar .subtitle {
+  font-size: 0.8rem;
+  color: #b9c6d3;
+  margin-top: 2px;
+}
+
+header.topbar nav a {
+  color: #cfe0ec;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-left: 16px;
+}
+header.topbar nav a:hover { color: white; text-decoration: underline; }
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.filters select, .filters input[type="search"] {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: white;
+}
+.filters input[type="search"] { flex: 1; min-width: 180px; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--slate);
+}
+.chip.active.comptabilite { background: var(--cat-comptabilite-bg); color: var(--cat-comptabilite); border-color: var(--cat-comptabilite); }
+.chip.active.fiscalite { background: var(--cat-fiscalite-bg); color: var(--cat-fiscalite); border-color: var(--cat-fiscalite); }
+.chip.active.facturation_electronique { background: var(--cat-facturation_electronique-bg); color: var(--cat-facturation_electronique); border-color: var(--cat-facturation_electronique); }
+.chip.active.all { background: var(--slate-light); color: var(--navy); border-color: var(--navy); }
+
+.meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--slate);
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button.btn {
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+button.btn:hover { background: var(--navy-light); }
+button.btn.secondary { background: white; color: var(--navy); border: 1px solid var(--border); }
+button.btn.danger { background: var(--danger); }
+button.btn:disabled { opacity: 0.5; cursor: default; }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.card .cats {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.tag.comptabilite { background: var(--cat-comptabilite-bg); color: var(--cat-comptabilite); }
+.tag.fiscalite { background: var(--cat-fiscalite-bg); color: var(--cat-fiscalite); }
+.tag.facturation_electronique { background: var(--cat-facturation_electronique-bg); color: var(--cat-facturation_electronique); }
+
+.card h3 { margin: 0 0 6px; font-size: 1rem; }
+.card h3 a { color: var(--navy); text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+
+.card .source-line {
+  font-size: 0.78rem;
+  color: var(--slate);
+  margin-bottom: 6px;
+}
+.card .summary { font-size: 0.88rem; color: #33424f; }
+
+.card .admin-actions {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+}
+.card .admin-actions label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--slate);
+}
+
+.login-box {
+  max-width: 340px;
+  margin: 60px auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+}
+.login-box h2 { margin-top: 0; font-size: 1.1rem; }
+.login-box input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+.error-msg { color: var(--danger); font-size: 0.82rem; }
+
+section.panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+}
+section.panel h2 { margin-top: 0; font-size: 1rem; }
+
+table.sources-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+table.sources-table th, table.sources-table td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); }
+table.sources-table td.status-ok { color: var(--accent); }
+table.sources-table td.status-ko { color: var(--danger); }
+
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px; }
+.form-grid input, .form-grid select, .form-grid textarea {
+  padding: 7px 9px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; width: 100%;
+}
+.form-grid label { font-size: 0.78rem; color: var(--slate); display: block; margin-bottom: 3px; }
+.full-row { grid-column: 1 / -1; }
+
+.copy-box {
+  white-space: pre-wrap;
+  background: var(--slate-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}

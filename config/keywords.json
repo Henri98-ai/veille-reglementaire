@@ -1,0 +1,25 @@
+{
+  "comptabilite": [
+    "comptable", "comptabilité", "PCG", "plan comptable général",
+    "normes comptables", "règlement ANC", "ANC", "IFRS", "IAS",
+    "bilan", "amortissement", "provision", "commissaire aux comptes",
+    "CNCC", "expert-comptable", "experts-comptables", "expertise comptable",
+    "clôture des comptes", "comptes annuels", "liasse fiscale",
+    "annexe comptable", "immobilisation", "état financier"
+  ],
+  "fiscalite": [
+    "impôt", "impots", "TVA", "BOFiP", "fiscal", "fiscalité", "CGI",
+    "impôt sur les sociétés", "IS", "impôt sur le revenu", "IR",
+    "taxe", "CVAE", "CFE", "crédit d'impôt", "réduction d'impôt",
+    "loi de finances", "DGFiP", "redressement fiscal", "contrôle fiscal",
+    "déclaration fiscale", "rescrit", "prélèvement à la source",
+    "plus-value", "abattement fiscal", "exonération"
+  ],
+  "facturation_electronique": [
+    "facturation électronique", "facture électronique", "e-invoicing",
+    "Factur-X", "Chorus Pro", "PDP", "plateforme de dématérialisation",
+    "e-reporting", "réforme de la facturation", "AIFE", "PPF",
+    "portail public de facturation", "dématérialisation des factures",
+    "annuaire des PDP", "flux structuré", "format Factur-X"
+  ]
+}
