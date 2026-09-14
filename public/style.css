@@ -15,6 +15,10 @@
   --cat-fiscalite-bg: #fbeed7;
   --cat-facturation_electronique: #4b3b8f;
   --cat-facturation_electronique-bg: #eae7f8;
+  --cat-ia: #b0225a;
+  --cat-ia-bg: #fbe3ec;
+  --cat-droit_affaires: #1f5a8a;
+  --cat-droit_affaires-bg: #e2eef8;
 }
 
 * { box-sizing: border-box; }
@@ -102,6 +106,8 @@ main {
 .chip.active.comptabilite { background: var(--cat-comptabilite-bg); color: var(--cat-comptabilite); border-color: var(--cat-comptabilite); }
 .chip.active.fiscalite { background: var(--cat-fiscalite-bg); color: var(--cat-fiscalite); border-color: var(--cat-fiscalite); }
 .chip.active.facturation_electronique { background: var(--cat-facturation_electronique-bg); color: var(--cat-facturation_electronique); border-color: var(--cat-facturation_electronique); }
+.chip.active.ia { background: var(--cat-ia-bg); color: var(--cat-ia); border-color: var(--cat-ia); }
+.chip.active.droit_affaires { background: var(--cat-droit_affaires-bg); color: var(--cat-droit_affaires); border-color: var(--cat-droit_affaires); }
 .chip.active.all { background: var(--slate-light); color: var(--navy); border-color: var(--navy); }
 
 .meta-bar {
@@ -154,6 +160,8 @@ button.btn:disabled { opacity: 0.5; cursor: default; }
 .tag.comptabilite { background: var(--cat-comptabilite-bg); color: var(--cat-comptabilite); }
 .tag.fiscalite { background: var(--cat-fiscalite-bg); color: var(--cat-fiscalite); }
 .tag.facturation_electronique { background: var(--cat-facturation_electronique-bg); color: var(--cat-facturation_electronique); }
+.tag.ia { background: var(--cat-ia-bg); color: var(--cat-ia); }
+.tag.droit_affaires { background: var(--cat-droit_affaires-bg); color: var(--cat-droit_affaires); }
 
 .card h3 { margin: 0 0 6px; font-size: 1rem; }
 .card h3 a { color: var(--navy); text-decoration: none; }

@@ -74,5 +74,35 @@
     "type": "html-generic",
     "defaultCategories": ["fiscalite", "comptabilite"],
     "enabled": true
+  },
+  {
+    "id": "cnil-actualites",
+    "name": "CNIL - Actualités (dont IA et RGPD)",
+    "homepage": "https://www.cnil.fr",
+    "url": "https://www.cnil.fr/fr/rss.xml",
+    "type": "rss",
+    "defaultCategories": ["ia"],
+    "enabled": true,
+    "note": "Flux général de la CNIL (pas uniquement IA) : les actus hors-sujet peuvent atterrir par défaut dans l'onglet IA, à surveiller."
+  },
+  {
+    "id": "actuia",
+    "name": "ActuIA - Actualités françaises de l'intelligence artificielle",
+    "homepage": "https://www.actuia.com",
+    "url": "https://www.actuia.com/feed/",
+    "type": "rss",
+    "defaultCategories": ["ia"],
+    "forceCategories": ["ia"],
+    "enabled": true
+  },
+  {
+    "id": "actu-juridique-affaires",
+    "name": "Actu-Juridique - Droit des affaires",
+    "homepage": "https://www.actu-juridique.fr",
+    "url": "https://www.actu-juridique.fr/matieres/affaires/",
+    "type": "html-generic",
+    "defaultCategories": ["droit_affaires"],
+    "forceCategories": ["droit_affaires"],
+    "enabled": true
   }
 ]

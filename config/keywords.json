@@ -21,5 +21,22 @@
     "e-reporting", "réforme de la facturation", "AIFE", "PPF",
     "portail public de facturation", "dématérialisation des factures",
     "annuaire des PDP", "flux structuré", "format Factur-X"
+  ],
+  "ia": [
+    "intelligence artificielle", "IA générative", "AI Act", "algorithme",
+    "modèle de langage", "LLM", "machine learning", "apprentissage automatique",
+    "réseau de neurones", "ChatGPT", "OpenAI", "Anthropic", "Claude",
+    "Mistral", "Gemini", "agent IA", "IA agentique", "CNIL",
+    "règlement européen sur l'IA", "systèmes d'IA", "biais algorithmique",
+    "automatisation", "chatbot", "deepfake", "hyper-trucage"
+  ],
+  "droit_affaires": [
+    "droit des sociétés", "droit des affaires", "droit commercial",
+    "fonds de commerce", "tribunal de commerce", "entreprises en difficulté",
+    "redressement judiciaire", "liquidation judiciaire", "cession d'entreprise",
+    "fusion-acquisition", "pacte d'associés", "statuts de société",
+    "SAS", "SARL", "SCI", "dirigeant de société", "responsabilité du dirigeant",
+    "clause de non-concurrence", "bail commercial", "relations commerciales",
+    "concurrence déloyale", "gouvernance d'entreprise"
   ]
 }
