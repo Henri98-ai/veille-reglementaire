@@ -13,7 +13,9 @@
     "taxe", "CVAE", "CFE", "crédit d'impôt", "réduction d'impôt",
     "loi de finances", "DGFiP", "redressement fiscal", "contrôle fiscal",
     "déclaration fiscale", "rescrit", "prélèvement à la source",
-    "plus-value", "abattement fiscal", "exonération"
+    "plus-value", "abattement fiscal", "exonération",
+    "barème kilométrique", "frais kilométriques", "note de frais",
+    "notes de frais", "indemnité kilométrique", "avantage en nature"
   ],
   "facturation_electronique": [
     "facturation électronique", "facture électronique", "e-invoicing",
