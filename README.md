@@ -75,17 +75,33 @@ récapitulatif est envoyé avec toutes les nouvelles actualités du jour,
 groupées par catégorie (ou un court message "aucune nouveauté" si rien n'a
 été trouvé, pour garder un rythme quotidien prévisible).
 
-Configuration nécessaire (variables d'environnement Render) :
+⚠️ **Important si vous êtes sur le plan gratuit de Render** : depuis
+septembre 2025, Render bloque tout le trafic SMTP sortant (ports 25, 465, 587)
+sur les services web gratuits. Un SMTP classique (Gmail, Outlook, OVH...) ne
+fonctionnera donc jamais tant que le service n'est pas passé sur un plan payant.
+La solution retenue ici est d'envoyer les emails via l'**API HTTP de Brevo**
+(port 443, jamais bloqué), qui a un plan gratuit de 300 emails/jour largement
+suffisant pour cet usage.
+
+Configuration recommandée (variables d'environnement Render) :
+
+- `BREVO_API_KEY` — clé API générée dans Brevo (SMTP & API > API Keys)
+- `MAIL_FROM` — adresse d'expédition (n'a pas besoin d'être hébergée chez Brevo,
+  une adresse Gmail ou autre convient très bien comme simple champ "expéditeur")
+- `PUBLIC_URL` — l'URL Render de l'app (ex. `https://veille-reglementaire.onrender.com`),
+  utilisée comme lien "Consulter le dashboard" dans l'email
+
+Si vous préférez malgré tout du SMTP classique (par exemple sur un plan Render
+payant, où les ports SMTP ne sont plus bloqués), les variables suivantes
+restent supportées en repli automatique si `BREVO_API_KEY` n'est pas définie :
 
 - `SMTP_HOST`, `SMTP_PORT` (587 par défaut), `SMTP_SECURE` (`true` si port 465)
 - `SMTP_USER`, `SMTP_PASS` — identifiants du compte d'envoi
 - `MAIL_FROM` — adresse d'expédition (par défaut, reprend `SMTP_USER`)
-- `PUBLIC_URL` — l'URL Render de l'app (ex. `https://veille-reglementaire.onrender.com`),
-  utilisée comme lien "Consulter le dashboard" dans l'email
 
-N'importe quel fournisseur SMTP fonctionne (Gmail avec un mot de passe
-d'application, OVH, Office 365, un service transactionnel comme Brevo/SendGrid,
-etc.).
+N'importe quel fournisseur SMTP fonctionne dans ce cas (Gmail avec un mot de
+passe d'application, OVH, Office 365 n'accepte plus l'authentification basique
+depuis 2022-2023 donc à éviter, Brevo lui-même en mode SMTP, etc.).
 
 Les destinataires et l'activation/désactivation de l'envoi se gèrent ensuite
 directement dans `/admin` (section "Synthèse quotidienne par email"), avec un

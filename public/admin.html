@@ -40,8 +40,9 @@
       <h2>Synthèse quotidienne par email</h2>
       <p style="font-size:0.82rem;color:var(--slate)">
         Envoyée automatiquement chaque jour ouvré à 7h15 avec toutes les nouvelles actualités du jour,
-        groupées par catégorie. Nécessite une configuration SMTP côté serveur (variables d'environnement
-        <code>SMTP_HOST</code>, <code>SMTP_USER</code>, <code>SMTP_PASS</code>).
+        groupées par catégorie. <strong>Sur Render en offre gratuite, les ports SMTP sortants sont bloqués</strong> :
+        configurez <code>BREVO_API_KEY</code> + <code>MAIL_FROM</code> (API HTTP, fonctionne sur le plan gratuit)
+        plutôt que les variables <code>SMTP_*</code>, qui ne marchent que sur un plan Render payant.
       </p>
       <div class="form-grid">
         <div class="full-row">
