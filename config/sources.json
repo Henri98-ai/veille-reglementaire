@@ -17,15 +17,25 @@
     "url": "https://www.economie.gouv.fr/rss/toutesactualites",
     "type": "rss",
     "defaultCategories": ["fiscalite", "comptabilite"],
-    "enabled": true
+    "enabled": true,
+    "note": "Ce flux ne renvoie que les ~10 dernières actualités de tout le ministère (tous sujets confondus) : utile en complément, pas comme source principale sur un sujet de niche."
   },
   {
     "id": "impots-pro",
-    "name": "Impots.gouv.fr - Actualités professionnels",
+    "name": "Impots.gouv.fr - Espace professionnel (à la une)",
     "homepage": "https://www.impots.gouv.fr",
-    "url": "https://www.impots.gouv.fr/actualites",
+    "url": "https://www.impots.gouv.fr/professionnel",
     "type": "html-generic",
     "defaultCategories": ["fiscalite", "facturation_electronique"],
+    "enabled": true
+  },
+  {
+    "id": "entreprendre-service-public",
+    "name": "Entreprendre.Service-Public.fr - Actualités entreprises",
+    "homepage": "https://entreprendre.service-public.gouv.fr",
+    "url": "https://entreprendre.service-public.gouv.fr/actualites",
+    "type": "html-generic",
+    "defaultCategories": ["fiscalite", "comptabilite"],
     "enabled": true
   },
   {
@@ -48,11 +58,12 @@
   },
   {
     "id": "facturation-electronique",
-    "name": "Portail officiel de la facturation électronique",
-    "homepage": "https://www.impots.gouv.fr/facturation-electronique",
-    "url": "https://www.impots.gouv.fr/facturation-electronique",
+    "name": "Portail officiel - Facturation électronique et plateformes agréées",
+    "homepage": "https://www.impots.gouv.fr",
+    "url": "https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees",
     "type": "html-generic",
     "defaultCategories": ["facturation_electronique"],
+    "forceCategories": ["facturation_electronique"],
     "enabled": true
   },
   {
